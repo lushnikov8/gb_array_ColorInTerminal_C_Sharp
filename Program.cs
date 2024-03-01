@@ -44,9 +44,9 @@ int[] ColorTextFont = {1,4,5,7,8,30,31,32,33,34,35,36,37,41,42,43,44,45,46,47};
 
 foreach (var item in ColorTextFont)
 {
-    Console.WriteLine($"------\x1b[{item}m------------параметр: {item}-----------------\x1b[0m------");
+    Console.WriteLine();
+    Console.WriteLine($"-----\x1b[{item}m-------------параметр: {item} '\\x1b[{item}m' -----------------\x1b[0m-----");
     PrintMainDiagonal(arr, $"\x1b[{item}m");
-    
 }
 
 // Console.WriteLine($"------------------параметр: {47}-----------------------");
