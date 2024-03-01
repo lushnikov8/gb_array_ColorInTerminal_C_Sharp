@@ -51,3 +51,6 @@ foreach (var item in ColorTextFont)
 
 // Console.WriteLine($"------------------параметр: {47}-----------------------");
 // PrintMainDiagonal(arr, $"\x1b[{47}m");
+
+//string Text="Тестовая строка";
+//Console.WriteLine($"\x1b[31m{Text}\x1b[0m");
