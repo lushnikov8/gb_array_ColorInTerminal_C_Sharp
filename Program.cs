@@ -1,4 +1,5 @@
-﻿//https://habr.com/ru/articles/94647/
+﻿//Инфу по изменению вида символов в терминале взял тут:
+//https://habr.com/ru/articles/94647/
 //Console.WriteLine("\x1b[31mTest\x1b[0m");
 
 int[,] Array2merRandomInput (int m, int n)
@@ -27,13 +28,6 @@ void PrintMainDiagonal(int[,] arryPrintMainDiagonal, String FormatStr)
 }
 
 
-
-void PrintArrayDouble (double[] b)
-{
-    foreach (var item in b) Console.Write($" {item}; ");
-}
-
-
 // Console.Write("Введите размерность м:");
 // int m = Convert.ToInt32(Console.ReadLine());
 
@@ -49,7 +43,7 @@ int[] ColorTextFont = {1,4,5,7,8,30,31,32,33,34,35,36,37,41,42,43,44,45,46,47};
 
 foreach (var item in ColorTextFont)
 {
-    Console.WriteLine($"------------------параметр: {item}-----------------------");
+    Console.WriteLine($"------\x1b[{item}m------------параметр: {item}-----------------\x1b[0m------");
     PrintMainDiagonal(arr, $"\x1b[{item}m");
     
 }
