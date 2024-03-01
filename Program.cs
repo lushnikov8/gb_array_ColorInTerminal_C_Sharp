@@ -1,6 +1,7 @@
 ﻿//Инфу по изменению вида символов в терминале взял тут:
 //https://habr.com/ru/articles/94647/
 //Console.WriteLine("\x1b[31mTest\x1b[0m");
+//отмена форматирования ключ \x1b[0m
 
 int[,] Array2merRandomInput (int m, int n)
 {
