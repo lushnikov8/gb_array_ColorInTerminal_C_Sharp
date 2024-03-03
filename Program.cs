@@ -19,9 +19,10 @@ void PrintMainDiagonal(int[,] arryPrintMainDiagonal, String FormatStr)
 {
   for (int i = 0; i < arryPrintMainDiagonal.GetLength(0); i++)
   {
-    for (int j = 0; j < arryPrintMainDiagonal.GetLength(1); j++)
+    int KolvoStolbcov = arryPrintMainDiagonal.GetLength(1);
+    for (int j = 0; j < KolvoStolbcov; j++)
     {
-        if (i == j) Console.Write($"{FormatStr}{arryPrintMainDiagonal[i,j]}\x1b[0m \t");
+        if (i == j || j == KolvoStolbcov-1-i) Console.Write($"{FormatStr}{arryPrintMainDiagonal[i,j]}\x1b[0m \t");
         else Console.Write($"\x1b[30m{arryPrintMainDiagonal[i,j]}\x1b[0m\t");
     }
     Console.WriteLine();
@@ -37,7 +38,7 @@ void PrintMainDiagonal(int[,] arryPrintMainDiagonal, String FormatStr)
 
 //int[,] arr = Array2merRandomInput(m,n);
 
-int[,] arr = Array2merRandomInput(7,7);
+int[,] arr = Array2merRandomInput(9,9);
 
 int[] ColorTextFont = {1,4,5,7,8,30,31,32,33,34,35,36,37,41,42,43,44,45,46,47};
 
@@ -45,7 +46,8 @@ int[] ColorTextFont = {1,4,5,7,8,30,31,32,33,34,35,36,37,41,42,43,44,45,46,47};
 foreach (var item in ColorTextFont)
 {
     Console.WriteLine();
-    Console.WriteLine($"-----\x1b[{item}m-------------параметр: {item} '\\x1b[{item}m' -----------------\x1b[0m-----");
+    Console.WriteLine($"\x1b[{item}m-----------параметр: {item} '\\x1b[{item}m' ----------------------\x1b[0m");
+    Console.WriteLine();
     PrintMainDiagonal(arr, $"\x1b[{item}m");
 }
 
